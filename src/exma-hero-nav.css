@@ -1,0 +1,484 @@
+/* ── NAV ────────────────────────────────────────────── */
+.exma-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.exma-nav-scrolled {
+  background: rgba(3, 0, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exma-nav-logo {
+  text-decoration: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 34px;
+}
+
+/* Logo imagen — nav */
+.exma-logo-img {
+  height: 220px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: -93px 0;
+}
+
+/* Logo imagen — footer */
+.exma-footer-logo-img {
+  height: 180px;
+}
+
+/* Logo imagen — login modal */
+.exma-login-logo-img {
+  height: 160px;
+}
+
+/* Logo imagen — intro splash */
+.exma-intro-logo-img {
+  height: 280px;
+  width: auto;
+  display: block;
+}
+
+.exma-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.exma-nav-login {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.exma-nav-login:hover { color: #ffffff; }
+
+.exma-nav-cta {
+  padding: 0.55rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exma-nav-cta:hover {
+  background: #ffffff;
+  color: #03000f;
+  border-color: #ffffff;
+}
+
+.exma-nav-hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.exma-nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: background 0.2s;
+}
+
+.exma-nav-hamburger:hover span { background: #ffffff; }
+
+/* ── FULLSCREEN OVERLAY ──────────────────────────────── */
+.exma-nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: #0d0025;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 4rem;
+}
+
+.exma-nav-overlay-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.exma-nav-overlay-close:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.exma-nav-overlay-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exma-nav-overlay-link {
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.2s, transform 0.25s ease;
+}
+
+.exma-nav-overlay-link:hover {
+  color: #ffffff;
+  transform: translateX(20px);
+}
+
+.exma-nav-overlay-links li:hover ~ li .exma-nav-overlay-link,
+.exma-nav-overlay-links:hover .exma-nav-overlay-link:not(:hover) {
+  opacity: 0.3;
+}
+
+.exma-nav-overlay-bottom {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 4rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.exma-nav-overlay-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.exma-nav-overlay-social:hover {
+  color: #F608F7;
+  transform: scale(1.15);
+}
+
+/* ── HERO ────────────────────────────────────────────── */
+.exma-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exma-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.exma-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 0, 15, 0.45) 0%,
+    rgba(3, 0, 15, 0.65) 60%,
+    rgba(3, 0, 15, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.exma-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 900px;
+}
+
+
+.exma-hero-badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(246, 8, 247, 0.4);
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.exma-hero-headline {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.exma-hero-line {
+  display: block;
+}
+
+.exma-word {
+  display: inline-block;
+}
+
+.exma-hero-perfecta {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.exma-hero-cursor {
+  display: inline-block;
+  animation: exma-cursor-blink 0.9s step-end infinite;
+  color: #F608F7;
+  margin-left: 2px;
+}
+
+@keyframes exma-cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.exma-hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  margin: 0 0 2.5rem;
+}
+
+.exma-hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.exma-hero-cta-primary,
+.exma-hero-cta-secondary {
+  padding: 0.85rem 2.2rem;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.exma-hero-cta-primary {
+  background: #F608F7;
+  color: #ffffff;
+  border: 1.5px solid #F608F7;
+}
+
+.exma-hero-cta-primary:hover {
+  background: transparent;
+  color: #F608F7;
+}
+
+.exma-hero-cta-secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.exma-hero-cta-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+}
+
+/* Scroll indicator */
+.exma-scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.exma-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4));
+}
+
+.exma-scroll-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 300;
+  letter-spacing: 0.35em;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .exma-nav { padding: 1rem 1.25rem; }
+  .exma-nav-login,
+  .exma-nav-cta { display: none; }
+  .exma-nav-overlay { padding: 3rem 2rem; }
+  .exma-nav-overlay-bottom { left: 2rem; }
+}
+
+/* ── ILLUMINATE SECTION ─────────────────────────────── */
+.exma-illuminate {
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18vh 2rem;
+}
+
+.exma-illuminate-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.exma-illuminate-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(246, 8, 247, 0.4);
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  margin: 0;
+}
+
+.exma-illuminate-words-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6em 0.8em;
+}
+
+.exma-illuminate-word {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+}
+
+/* Animated wave separator */
+.exma-wave-wrap {
+  position: absolute;
+  top: -130px;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  overflow: visible;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.exma-wave-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.exma-wave-layer-1 {
+  animation: exma-wave-scroll 6s linear infinite;
+  z-index: 3;
+}
+
+.exma-wave-layer-2 {
+  animation: exma-wave-scroll 10s linear infinite;
+  z-index: 2;
+}
+
+.exma-wave-layer-3 {
+  animation: exma-wave-scroll 14s linear infinite;
+  z-index: 1;
+}
+
+/* Bottom waves — rotated 180° */
+.exma-wave-wrap-bottom {
+  top: auto;
+  bottom: -130px;
+  transform: rotate(180deg);
+}
+
+@keyframes exma-wave-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

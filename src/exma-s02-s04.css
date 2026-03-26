@@ -1,0 +1,366 @@
+/* ── S02 SPONSORS ─────────────────────────────────────── */
+.exma-sponsors-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 6rem 0 5rem;
+  overflow: hidden;
+}
+
+.exma-sponsors-head {
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+.exma-sponsors-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(246, 8, 247, 0.7);
+  margin: 0 0 0.75rem;
+}
+
+.exma-sponsors-headline {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.exma-sponsors-marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exma-sponsors-row {
+  overflow: hidden;
+}
+
+.exma-sponsors-track {
+  display: flex;
+  white-space: nowrap;
+  animation: sponsors-left 30s linear infinite;
+}
+
+.exma-sponsors-track-reverse {
+  animation: sponsors-right 30s linear infinite;
+}
+
+.exma-sponsors-row:hover .exma-sponsors-track {
+  animation-play-state: paused;
+}
+
+.exma-sponsors-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.18);
+  padding: 0 2.5rem;
+  cursor: default;
+  transition: color 0.3s, filter 0.3s;
+  display: inline-block;
+}
+
+.exma-sponsors-logo:hover {
+  color: #F608F7;
+  text-shadow: 0 0 20px rgba(246, 8, 247, 0.4);
+}
+
+@keyframes sponsors-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes sponsors-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* ── S03 CONNECT TABS ────────────────────────────────── */
+.exma-connect-section {
+  position: relative;
+  background: #F608F7;
+  padding: 3rem 2rem 4rem;
+  z-index: 2;
+  overflow: visible;
+}
+
+.exma-connect-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0d0025;
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.exma-connect-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exma-connect-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(155, 93, 229, 0.3);
+  background: #0d0025;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(246, 8, 247, 0.1), 0 0 15px rgba(155, 93, 229, 0.08);
+}
+
+.exma-connect-panel:hover {
+  border-color: rgba(246, 8, 247, 0.5);
+  box-shadow: 0 12px 50px rgba(246, 8, 247, 0.2), 0 0 25px rgba(155, 93, 229, 0.15);
+}
+
+.exma-connect-panel-img-wrap {
+  height: 250px;
+  overflow: hidden;
+}
+
+.exma-connect-panel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.exma-connect-panel:hover .exma-connect-panel-img {
+  transform: scale(1.03);
+}
+
+.exma-connect-panel-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exma-connect-panel-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  color: rgba(246, 8, 247, 0.8);
+  margin: 0;
+}
+
+.exma-connect-panel-headline {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.exma-connect-panel-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.exma-connect-panel-cta {
+  align-self: flex-start;
+  padding: 0.7rem 1.8rem;
+  border: 1.5px solid #F608F7;
+  border-radius: 999px;
+  background: #F608F7;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.exma-connect-panel-cta:hover {
+  background: transparent;
+  color: #F608F7;
+  border-color: #F608F7;
+}
+
+@media (max-width: 768px) {
+  .exma-connect-panels { grid-template-columns: 1fr; }
+}
+
+/* ── S03 CAREER SECTION (inner elements) ────────────── */
+.exma-career-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.exma-career-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 20, 0.6);
+  margin: 0 0 1rem;
+}
+
+.exma-career-headline {
+  font-size: clamp(3rem, 7vw, 7rem);
+  color: #0d0025;
+  margin: 0;
+  line-height: 1;
+}
+
+.exma-career-headline-italic {
+  font-style: italic;
+  color: #ffffff;
+}
+
+.exma-career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.exma-career-card {
+  background: #0d0025;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exma-career-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.exma-career-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #F608F7;
+  line-height: 1;
+  display: block;
+}
+
+.exma-career-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+}
+
+.exma-career-card-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.exma-career-cta-wrap {
+  text-align: center;
+  padding: 0 2rem 2rem;
+}
+
+.exma-career-cta {
+  padding: 1rem 3rem;
+  border: 2px solid #0d0025;
+  border-radius: 999px;
+  background: #0d0025;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.exma-career-cta:hover {
+  background: transparent;
+  color: #0d0025;
+  border-color: #0d0025;
+}
+
+@media (max-width: 900px) {
+  .exma-career-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .exma-career-grid { grid-template-columns: 1fr; }
+}
+
+/* ── S04 TOPICS MARQUEE ─────────────────────────────── */
+.exma-topics-section {
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 5rem 0;
+  padding-top: 10rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.exma-topics-row {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.exma-topics-row:last-child { margin-bottom: 0; }
+
+.exma-topics-track {
+  display: flex;
+  white-space: nowrap;
+  animation: topics-left 40s linear infinite;
+}
+
+.exma-topics-track-right {
+  animation: topics-right 40s linear infinite;
+}
+
+.exma-topics-item {
+  font-size: clamp(2rem, 4.5vw, 5rem);
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  cursor: default;
+  transition: color 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.exma-topics-dot {
+  color: #F608F7;
+}
+
+@keyframes topics-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes topics-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}

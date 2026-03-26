@@ -1,0 +1,481 @@
+/* ── S12 CERTS ──────────────────────────────────────── */
+.exma-certs-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 6rem 2rem;
+}
+
+.exma-certs-headline {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 4rem;
+  line-height: 1;
+}
+
+.exma-certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.exma-certs-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  will-change: transform;
+  transition: border-color 0.3s;
+}
+
+.exma-certs-card:hover { border-color: rgba(246, 8, 247, 0.25); }
+
+.exma-certs-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #9a0098, #F608F7);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.exma-certs-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(246, 8, 247, 0.4);
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(246, 8, 247, 0.9);
+  align-self: flex-start;
+}
+
+.exma-certs-name {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.exma-certs-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+.exma-certs-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .exma-certs-grid { grid-template-columns: 1fr; }
+}
+
+/* ── S14 TESTIMONIALS ─────────────────────────────────── */
+.exma-testi-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 7rem 2rem;
+  text-align: center;
+}
+
+.exma-testi-headline {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  color: #ffffff;
+  margin: 0 0 4rem;
+  line-height: 1.05;
+}
+
+.exma-testi-slide {
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.exma-testi-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(246, 8, 247, 0.3);
+}
+
+.exma-testi-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.exma-testi-author {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+}
+
+.exma-testi-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.exma-testi-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.exma-testi-arrow {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.exma-testi-arrow:hover { border-color: rgba(255, 255, 255, 0.4); color: #ffffff; }
+
+.exma-testi-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.exma-testi-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.exma-testi-dot-active {
+  background: #F608F7;
+  transform: scale(1.3);
+}
+
+/* ── S15 PRICING ──────────────────────────────────────── */
+.exma-pricing-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 7rem 2rem;
+  text-align: center;
+}
+
+.exma-pricing-headline {
+  font-size: clamp(3rem, 7vw, 7rem);
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+  line-height: 1;
+}
+
+.exma-pricing-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 0 4rem;
+  letter-spacing: 0.15em;
+}
+
+.exma-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.exma-pricing-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  will-change: transform;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.exma-pricing-card-featured {
+  border-color: rgba(246, 8, 247, 0.3);
+  box-shadow: 0 0 40px rgba(246, 8, 247, 0.07);
+}
+
+.exma-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3rem 1rem;
+  background: linear-gradient(135deg, #9a0098, #F608F7);
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.exma-pricing-plan-name {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.exma-pricing-price {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+}
+
+.exma-pricing-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+.exma-pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.exma-pricing-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.exma-pricing-check {
+  color: #F608F7;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.exma-pricing-cta {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.exma-pricing-cta:hover { background: #ffffff; color: #03000f; border-color: #ffffff; }
+
+.exma-pricing-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(246, 8, 247, 0.7);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.exma-pricing-link:hover { color: #F608F7; }
+
+@media (max-width: 640px) {
+  .exma-pricing-grid { grid-template-columns: 1fr; }
+}
+
+/* ── S16 CTA SPLIT ──────────────────────────────────── */
+.exma-ctasplit-section {
+  display: flex;
+  height: 70vh;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.exma-ctasplit-half {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.exma-ctasplit-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.exma-ctasplit-half:hover .exma-ctasplit-bg { transform: scale(1.04); }
+
+.exma-ctasplit-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 0, 15, 0.6);
+  z-index: 1;
+}
+
+.exma-ctasplit-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.exma-ctasplit-headline {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.exma-ctasplit-cta {
+  padding: 0.8rem 2rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.exma-ctasplit-cta:hover { background: #ffffff; color: #03000f; }
+
+@media (max-width: 640px) {
+  .exma-ctasplit-section { flex-direction: column; height: auto; }
+  .exma-ctasplit-half { height: 50vh; }
+}
+
+/* ── S17 CIERRE ──────────────────────────────────────── */
+.exma-cierre-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.exma-cierre-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  z-index: 0;
+}
+
+.exma-cierre-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.exma-cierre-headline {
+  font-size: clamp(3.5rem, 10vw, 10rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 0.95;
+  display: flex;
+  flex-direction: column;
+}
+
+.exma-cierre-line { display: block; }
+
+.exma-cierre-body {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 500px;
+}
+
+.exma-cierre-cta {
+  padding: 1rem 2.8rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  cursor: pointer;
+  transition: all 0.35s;
+  will-change: transform;
+}
+
+.exma-cierre-cta:hover { background: #ffffff; color: #03000f; border-color: #ffffff; }

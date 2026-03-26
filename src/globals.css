@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+}

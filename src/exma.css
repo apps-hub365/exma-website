@@ -1,0 +1,923 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;900&display=swap');
+
+/* ── WRAPPER & GLOBAL SCOPED ─────────────────────────── */
+.exma-page-wrapper {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: clip;
+  position: relative;
+}
+
+.exma-headline {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+
+/* ── INTRO OVERLAY ───────────────────────────────────── */
+.exma-intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 20% 50%, #5c0060 0%, #250032 40%, #0d0025 70%, #03000f 100%);
+  clip-path: circle(150% at 50% 50%);
+}
+
+.exma-intro-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.exma-intro-exma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exma-intro-svg-wrap {
+  width: clamp(200px, 50vw, 500px);
+  height: auto;
+}
+
+.exma-intro-line {
+  width: 120px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scaleX(0);
+  transform-origin: left;
+  margin: 0.5rem 0;
+}
+
+.exma-intro-speakers {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: 0.6em;
+  display: flex;
+  overflow: hidden;
+}
+
+.exma-intro-speakers span {
+  display: inline-block;
+  opacity: 0;
+}
+
+/* ── NAVBAR ──────────────────────────────────────────── */
+.exma-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 1.2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.exma-navbar-scrolled {
+  background: rgba(3, 0, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.exma-nav-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.exma-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+.exma-nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.exma-nav-links a:hover {
+  opacity: 1;
+}
+
+.exma-nav-lang {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.8rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  line-height: 1.4;
+}
+
+.exma-nav-lang:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.exma-nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .exma-navbar {
+    padding: 1rem 1.5rem;
+  }
+  .exma-nav-links {
+    display: none;
+  }
+}
+
+/* ── HERO ────────────────────────────────────────────── */
+.exma-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.exma-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.exma-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.exma-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  opacity: 0;
+}
+
+.exma-hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+}
+
+.exma-hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  letter-spacing: 0.5em;
+  font-weight: 200;
+  opacity: 0.6;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+
+.exma-scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.exma-scroll-line {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.4);
+  animation: exmaScrollPulse 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+.exma-scroll-text {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+@keyframes exmaScrollPulse {
+  0% { opacity: 0; transform: scaleY(0); }
+  50% { opacity: 1; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(0); }
+}
+
+/* ── HEADLINE SECTION ────────────────────────────────── */
+.exma-headline-section {
+  background: #0d0025;
+  padding: 15vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.exma-headline-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── SPEAKERS GRID ───────────────────────────────────── */
+.exma-speakers-section {
+  background: #0d0025;
+  padding: 5vh 3vw;
+}
+
+.exma-speakers-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.exma-speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .exma-speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .exma-speakers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exma-card-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.exma-card-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.exma-card-wrapper video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.exma-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.exma-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.exma-card-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.exma-card-topic {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-top: 0.3rem;
+}
+
+.exma-card-country {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+  margin-top: 0.2rem;
+}
+
+/* ── STATS ───────────────────────────────────────────── */
+.exma-stats-section {
+  background: #0d0025;
+  padding: 10vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.exma-stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exma-stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: #F608F7;
+  line-height: 1;
+}
+
+.exma-stat-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}
+
+.exma-stat-divider {
+  width: 1px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .exma-stats-section {
+    gap: 2rem;
+  }
+  .exma-stat-divider {
+    display: none;
+  }
+}
+
+/* ── CTA ─────────────────────────────────────────────── */
+.exma-cta-section {
+  background: radial-gradient(
+    ellipse at 50% 60%,
+    #5c0060 0%,
+    #250032 35%,
+    #0d0025 65%,
+    #03000f 100%
+  );
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.exma-cta-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.exma-cta-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: rgba(246, 8, 247, 0.08);
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+}
+
+.exma-cta-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(246, 8, 247, 0.06);
+  bottom: -80px;
+  right: -80px;
+  filter: blur(60px);
+}
+
+.exma-cta-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.exma-cta-subtext {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.45em;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.exma-cta-button {
+  margin-top: 2.5rem;
+  padding: 1.1rem 3.5rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.exma-cta-button:hover {
+  background: #ffffff;
+  color: #03000f;
+  border-color: #ffffff;
+}
+
+/* ── FOOTER ──────────────────────────────────────────── */
+.exma-footer {
+  background: #0d0025;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem 3rem;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  opacity: 0.3;
+}
+
+/* ── NAV ACTIVE ──────────────────────────────────────── */
+.exma-nav-active {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  pointer-events: none;
+}
+
+/* ── BECOME A SPEAKER PAGE ───────────────────────────── */
+.exma-speaker-form-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 8rem 2rem 5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.exma-speaker-form-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    #5c0060 0%,
+    #250032 40%,
+    #0d0025 70%,
+    #03000f 100%
+  );
+  z-index: 0;
+}
+
+.exma-speaker-form-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(155,93,229,0.15) 0%, transparent 60%);
+}
+
+.exma-speaker-form-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.exma-speaker-form-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(246, 8, 247, 0.9);
+  margin: 0 0 1rem;
+}
+
+.exma-speaker-form-title {
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+}
+
+.exma-speaker-form-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Form section */
+.exma-speaker-form-section {
+  background: #0d0025;
+  padding: 5rem 2rem 6rem;
+}
+
+.exma-speaker-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.exma-speaker-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exma-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .exma-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exma-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exma-form-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.exma-form-input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.95rem 1.2rem;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.exma-form-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.exma-form-input:focus {
+  border-color: rgba(246, 8, 247, 0.6);
+  background: rgba(246, 8, 247, 0.05);
+}
+
+.exma-form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.3)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  cursor: pointer;
+}
+
+.exma-form-select option {
+  background: #1a0035;
+  color: #ffffff;
+}
+
+.exma-form-textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+.exma-speaker-form-submit {
+  margin-top: 1rem;
+  padding: 1.1rem 3.5rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.exma-speaker-form-submit:hover {
+  background: #ffffff;
+  color: #03000f;
+  border-color: #ffffff;
+}
+
+/* Success state */
+.exma-speaker-form-success {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.exma-speaker-form-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(246, 8, 247, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #F608F7;
+}
+
+.exma-speaker-form-success h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: #ffffff;
+  margin: 0;
+}
+
+.exma-speaker-form-success p {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.95rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ── LOGIN MODAL ─────────────────────────────────────── */
+.exma-login-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.exma-login-modal {
+  position: relative;
+  background: #0d0025;
+  border: 1px solid rgba(246, 8, 247, 0.2);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(246, 8, 247, 0.08);
+}
+
+.exma-login-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.exma-login-close:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.exma-login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.exma-login-logo {
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+}
+
+.exma-login-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(246, 8, 247, 0.8);
+  margin: 0.25rem 0 0;
+}
+
+.exma-login-title {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+  line-height: 1;
+}
+
+.exma-login-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 0 2rem;
+}
+
+.exma-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.exma-login-input {
+  border-radius: 10px !important;
+}
+
+.exma-login-forgot {
+  text-align: right;
+  margin-top: -0.5rem;
+}
+
+.exma-login-forgot a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(246, 8, 247, 0.7);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.exma-login-forgot a:hover {
+  color: #F608F7;
+}
+
+.exma-login-btn {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+}
+
+.exma-login-btn:hover:not(:disabled) {
+  background: #ffffff;
+  color: #03000f;
+  border-color: #ffffff;
+}
+
+.exma-login-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.exma-login-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: exmaSpinLogin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes exmaSpinLogin {
+  to { transform: rotate(360deg); }
+}
+
+.exma-login-register {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  margin: 1.5rem 0 0;
+}
+
+.exma-login-register a {
+  color: rgba(246, 8, 247, 0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.exma-login-register a:hover {
+  color: #F608F7;
+}

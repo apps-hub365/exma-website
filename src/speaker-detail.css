@@ -1,0 +1,462 @@
+/* ── SPEAKER DETAIL PAGE ─────────────────────────────── */
+.spk-page {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── HERO (VIDEO) ────────────────────────────────────── */
+.spk-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #08001a;
+}
+
+.spk-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spk-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(3, 0, 15, 0.92) 100%
+  );
+}
+
+.spk-back {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.spk-back:hover {
+  background: #ffffff;
+  color: #03000f;
+}
+
+.spk-hero-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 4rem;
+  z-index: 5;
+}
+
+.spk-hero-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  color: #ffffff;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin: 0;
+  overflow: hidden;
+}
+
+.spk-hero-name .spk-word {
+  display: inline-block;
+  margin-right: 0.3em;
+}
+
+.spk-hero-titulo {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.spk-hero-pais {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}
+
+/* ── MUTE BUTTON ─────────────────────────────────────── */
+.spk-mute-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.spk-mute-btn:hover {
+  background: rgba(246, 8, 247, 0.4);
+  border-color: rgba(246, 8, 247, 0.6);
+}
+
+/* ── SCROLL INDICATOR ────────────────────────────────── */
+.spk-hero-scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spk-hero-scroll-line {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.4);
+  animation: spkScrollPulse 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+.spk-hero-scroll-text {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+@keyframes spkScrollPulse {
+  0% { opacity: 0; transform: scaleY(0); }
+  50% { opacity: 1; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(0); }
+}
+
+/* ── BIO SECTION ─────────────────────────────────────── */
+.spk-bio-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 8rem 4rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.spk-bio-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #F608F7;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.spk-bio-paragraph {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.spk-bio-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.spk-bio-portrait-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.spk-bio-portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── TEMAS SECTION ───────────────────────────────────── */
+.spk-temas-section-bg {
+  background: #0a0010;
+}
+
+.spk-temas-section {
+  background: #0a0010;
+  padding: 6rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.spk-temas-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #F608F7;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.spk-tema-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  cursor: default;
+  transition: background 0.3s ease;
+}
+
+.spk-tema-item:hover {
+  background: rgba(246, 8, 247, 0.05);
+}
+
+.spk-tema-item:hover .spk-tema-text {
+  color: #ffffff;
+}
+
+.spk-tema-item:hover .spk-tema-arrow {
+  color: #F608F7;
+  transform: translateX(6px);
+}
+
+.spk-tema-item:hover .spk-tema-num {
+  color: #b47aff;
+}
+
+.spk-tema-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  color: #F608F7;
+  min-width: 2rem;
+  transition: color 0.3s ease;
+}
+
+.spk-tema-text {
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.spk-tema-arrow {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+/* ── VIDEO SECTION ───────────────────────────────────── */
+.spk-video-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 6rem 4rem;
+}
+
+.spk-video-placeholder {
+  width: 80%;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.spk-video-play-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.spk-video-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+/* ── REDES SECTION (ICON CIRCLES) ────────────────────── */
+.spk-redes-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 4rem;
+  text-align: center;
+}
+
+.spk-redes-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #F608F7;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.spk-redes-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.spk-redes-icon {
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.spk-redes-icon:hover {
+  background: #F608F7;
+  border-color: #F608F7;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* ── CTA SECTION ─────────────────────────────────────── */
+.spk-cta-section {
+  background: radial-gradient(ellipse at 20% 50%, #5c0060 0%, #250032 40%, #0d0025 70%, #03000f 100%);
+  padding: 8rem 4rem;
+  text-align: center;
+}
+
+.spk-cta-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 6vw, 5rem);
+  color: #ffffff;
+  line-height: 1.05;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.spk-cta-title .spk-char {
+  display: inline-block;
+}
+
+.spk-cta-sub {
+  font-size: 1rem;
+  opacity: 0.5;
+  margin: 1rem 0 3rem;
+}
+
+.spk-cta-btn {
+  display: inline-block;
+  background: #F608F7;
+  color: #ffffff;
+  padding: 1.2rem 3rem;
+  border-radius: 999px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.spk-cta-btn:hover {
+  transform: scale(1.05);
+  background: #b47aff;
+}
+
+/* ── FOOTER ──────────────────────────────────────────── */
+.spk-footer {
+  background: #0d0025;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem 3rem;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  opacity: 0.3;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .spk-hero-content {
+    bottom: 3rem;
+    left: 2rem;
+    right: 2rem;
+  }
+
+  .spk-hero-name {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .spk-mute-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .spk-bio-section {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .spk-bio-portrait-wrap {
+    order: -1;
+  }
+
+  .spk-temas-section {
+    padding: 4rem 2rem;
+  }
+
+  .spk-tema-text {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+
+  .spk-video-placeholder {
+    width: 95%;
+  }
+
+  .spk-video-section {
+    padding: 4rem 2rem;
+  }
+
+  .spk-redes-section {
+    padding: 3rem 2rem;
+  }
+
+  .spk-cta-section {
+    padding: 5rem 2rem;
+  }
+
+  .spk-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

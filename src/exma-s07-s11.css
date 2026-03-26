@@ -1,0 +1,603 @@
+/* ── S07 MOCKUP SEARCH ──────────────────────────────── */
+.exma-mockup-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.exma-mockup-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(246, 8, 247, 0.7);
+  margin: 0 0 0.75rem;
+}
+
+.exma-mockup-headline {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  color: #ffffff;
+  margin: 0 0 3rem;
+  line-height: 1;
+}
+
+.exma-mockup-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 60px rgba(246, 8, 247, 0.08), 0 30px 80px rgba(0, 0, 0, 0.4);
+  will-change: transform;
+}
+
+.exma-mockup-search {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.exma-mockup-search-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  flex: 1;
+}
+
+.exma-mockup-search-cursor {
+  color: #F608F7;
+  animation: exma-cursor-blink 0.9s step-end infinite;
+}
+
+.exma-mockup-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.exma-mockup-filter {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.exma-mockup-filter-active,
+.exma-mockup-filter:hover {
+  border-color: rgba(246, 8, 247, 0.5);
+  color: #ffffff;
+  background: rgba(246, 8, 247, 0.1);
+}
+
+.exma-mockup-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exma-mockup-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: left;
+}
+
+.exma-mockup-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.exma-mockup-row-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.exma-mockup-row-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.exma-mockup-row-spec {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.exma-mockup-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.exma-mockup-rate {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+  min-width: 60px;
+  text-align: right;
+}
+
+.exma-mockup-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 1rem 0 0;
+  text-align: right;
+  letter-spacing: 0.1em;
+}
+
+/* ── S08 PROFILE DEMO ─────────────────────────────────── */
+.exma-profile-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 6rem 2rem;
+}
+
+.exma-profile-eyebrow {
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  color: rgba(246, 8, 247, 0.6);
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.exma-profile-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 2.5rem;
+}
+
+.exma-profile-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exma-profile-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+}
+
+.exma-profile-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.exma-profile-badge {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(246, 8, 247, 0.4);
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: rgba(246, 8, 247, 0.9);
+}
+
+.exma-profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.exma-profile-name {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+}
+
+.exma-profile-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.exma-profile-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.exma-profile-star {
+  font-size: 1rem;
+}
+
+.exma-profile-rating {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+  margin-left: 0.5rem;
+}
+
+.exma-profile-rates {
+  display: flex;
+  gap: 1rem;
+}
+
+.exma-profile-rate-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exma-profile-rate-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.exma-profile-rate-val {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.exma-profile-score-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(246, 8, 247, 0.07);
+  border: 1px solid rgba(246, 8, 247, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.exma-profile-score-num {
+  font-size: 3.5rem;
+  color: #F608F7;
+  line-height: 1;
+}
+
+.exma-profile-score-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+}
+
+.exma-profile-score-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: rgba(246, 8, 247, 0.6);
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+.exma-profile-cta {
+  align-self: flex-start;
+  padding: 0.85rem 2rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.exma-profile-cta:hover { background: #ffffff; color: #03000f; border-color: #ffffff; }
+
+@media (max-width: 768px) {
+  .exma-profile-card { grid-template-columns: 1fr; }
+  .exma-profile-img { max-height: 300px; }
+}
+
+/* ── S09 LINEUP DEMO ─────────────────────────────────── */
+.exma-lineup-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 6rem 2rem;
+}
+
+.exma-lineup-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(246, 8, 247, 0.7);
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+
+.exma-lineup-headline {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 3rem;
+  line-height: 1;
+}
+
+.exma-lineup-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.exma-lineup-header {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr 80px;
+  gap: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.exma-lineup-col {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.exma-lineup-col-right { text-align: right; }
+
+.exma-lineup-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr 80px;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  align-items: center;
+}
+
+.exma-lineup-time {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.exma-lineup-speaker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.exma-lineup-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.exma-lineup-activity {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.exma-lineup-rate {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: right;
+}
+
+.exma-lineup-status {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.exma-lineup-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: rgba(74, 222, 128, 0.8);
+  letter-spacing: 0.08em;
+}
+
+.exma-lineup-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.exma-lineup-total-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
+}
+
+.exma-lineup-total-val {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* ── S10 REVIEW ──────────────────────────────────────── */
+.exma-review-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.exma-review-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.exma-review-quote-mark {
+  font-size: 8rem;
+  color: rgba(246, 8, 247, 0.25);
+  line-height: 0.8;
+  display: block;
+  margin-bottom: -1rem;
+}
+
+.exma-review-text {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+}
+
+.exma-review-author {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.15em;
+  font-style: italic;
+  margin: 0 0 4rem;
+}
+
+.exma-review-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.exma-review-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.exma-review-stat-num {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: #ffffff;
+  line-height: 1;
+}
+
+.exma-review-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ── S11 SPEAKER FEATURES ─────────────────────────────── */
+.exma-spkfeat-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 6rem 2rem;
+}
+
+.exma-spkfeat-headline {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 4rem;
+  line-height: 1.05;
+}
+
+.exma-spkfeat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exma-spkfeat-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.3s;
+  will-change: transform;
+}
+
+.exma-spkfeat-card:hover { border-color: rgba(246, 8, 247, 0.2); }
+
+.exma-spkfeat-num {
+  font-size: 5rem;
+  color: rgba(246, 8, 247, 0.2);
+  line-height: 1;
+  display: block;
+}
+
+.exma-spkfeat-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #ffffff;
+  margin: 0;
+}
+
+.exma-spkfeat-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .exma-spkfeat-grid { grid-template-columns: 1fr; }
+}
