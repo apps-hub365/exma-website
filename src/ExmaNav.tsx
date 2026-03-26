@@ -21,7 +21,7 @@ export default function ExmaNav({ onLoginClick, onSpeakerClick }: ExmaNavProps) 
   const overlayRef = useRef<HTMLDivElement>(null);
   const overlayLinksRef = useRef<HTMLUListElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
-  const [open, setOpen] = useState(false);
+  const [, setOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   // Scroll hide/show + background blur
