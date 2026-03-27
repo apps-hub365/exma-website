@@ -176,6 +176,16 @@
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 4rem;
+  overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+  .exma-nav-overlay {
+    padding: 3rem 6rem;
+  }
+  .exma-nav-overlay-link {
+    font-size: clamp(1.5rem, 2.8vw, 2.8rem);
+  }
 }
 
 .exma-nav-overlay-close {
@@ -207,14 +217,14 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0;
 }
 
 .exma-nav-overlay-link {
-  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   cursor: pointer;
   display: inline-block;
@@ -358,6 +368,7 @@
 }
 
 .exma-hero-ctas {
+  opacity: 0;
   display: flex;
   gap: 1rem;
   justify-content: center;

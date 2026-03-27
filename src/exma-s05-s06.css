@@ -1,8 +1,9 @@
 /* ── S05 VALUE PROPS — HORIZONTAL SCROLL ────────────── */
 .exma-value-section {
   background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
-  padding: 10rem 0 0;
+  padding: 10rem 0 7rem;
   overflow: hidden;
+  position: relative;
 }
 
 .exma-value-headline {

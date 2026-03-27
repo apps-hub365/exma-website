@@ -14,7 +14,7 @@ import ExmaHowItWorks from './ExmaHowItWorks';
 import ExmaCerts from './ExmaCerts';
 import ExmaSpeakers from './ExmaSpeakers';
 import ExmaTestimonials from './ExmaTestimonials';
-import ExmaPricing from './ExmaPricing';
+import ExmaPricingPreview from './ExmaPricingPreview';
 import ExmaCTASplit from './ExmaCTASplit';
 import ExmaCierre from './ExmaCierre';
 import ExmaFAQ from './ExmaFAQ';
@@ -102,7 +102,7 @@ export default function App() {
 
           <ExmaTestimonials />
 
-          <ExmaPricing />
+          <ExmaPricingPreview />
 
           <ExmaCTASplit />
 

@@ -19,7 +19,7 @@ const speakerPlans = [
   },
   {
     name: 'Profesional',
-    price: '$29',
+    price: '$49',
     period: '/mes',
     desc: 'Para speakers que quieren crecer y monetizar.',
     includes: [
@@ -37,7 +37,7 @@ const speakerPlans = [
   },
   {
     name: 'Elite',
-    price: '$79',
+    price: '$99',
     period: '/mes',
     desc: 'Para speakers de alto nivel que dominan escenarios.',
     includes: [
@@ -73,6 +73,7 @@ const organizerPlans = [
     price: '$49',
     period: '/mes',
     desc: 'Herramientas completas para eventos de alto impacto.',
+
     includes: [
       'Todo lo del plan Explorador',
       'Solicitudes ilimitadas',
@@ -88,8 +89,8 @@ const organizerPlans = [
   },
   {
     name: 'Enterprise',
-    price: 'Custom',
-    period: '',
+    price: '$99',
+    period: '/mes',
     desc: 'Para empresas con múltiples eventos al año.',
     includes: [
       'Todo lo del plan Pro',

@@ -11,8 +11,6 @@ interface ExmaHeroProps {
 
 const wordStyle: React.CSSProperties = {
   display: 'inline-block',
-  opacity: 0,
-  transform: 'translateY(32px)',
 };
 
 export default function ExmaHero({ onSpeakerClick }: ExmaHeroProps) {
@@ -27,14 +25,15 @@ export default function ExmaHero({ onSpeakerClick }: ExmaHeroProps) {
         gsap.fromTo(videoRef.current, { scale: 1.05 }, { scale: 1, duration: 2, ease: 'power2.out' });
       }
 
-      gsap.to('.exma-word', {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        stagger: 0.13,
-        ease: 'power3.out',
-        delay: 0.2,
-      });
+      gsap.fromTo('.exma-word',
+        { opacity: 0, y: 32 },
+        { opacity: 1, y: 0, duration: 0.7, stagger: 0.13, ease: 'power3.out', delay: 0.2, immediateRender: false }
+      );
+
+      gsap.fromTo('.exma-hero-ctas',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay: 1.2 }
+      );
 
       gsap.to(scrollIndicatorRef.current, {
         y: 8,

@@ -94,7 +94,7 @@ export default function ExmaTestimonials() {
       onMouseLeave={() => setPaused(false)}
     >
       <h2 className="exma-testi-headline exma-headline">
-        Confiado por organizadores<br />y speakers.
+        Confiado por organizadores<br />y speakers
       </h2>
 
       <div className="exma-testi-stage">

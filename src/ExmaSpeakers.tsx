@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { speakersMock } from './data/speakers.mock';
-import ScrollIndicator from './ScrollIndicator';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -120,7 +119,6 @@ export default function ExmaSpeakers() {
         ))}
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem 0 1rem' }}>
-        <ScrollIndicator />
       </div>
     </section>
   );

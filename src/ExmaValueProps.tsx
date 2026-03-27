@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollIndicator from './ScrollIndicator';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +65,7 @@ export default function ExmaValueProps() {
           </div>
         ))}
       </div>
+      <ScrollIndicator />
     </section>
   );
 }

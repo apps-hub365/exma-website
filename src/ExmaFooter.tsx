@@ -82,7 +82,9 @@ export default function ExmaFooter() {
     <footer ref={sectionRef} className="exma-footer-full" data-section="footer">
       <div className="exma-footer-top">
         <div className="exma-footer-brand">
-          <img src={`${import.meta.env.BASE_URL}exma-speakers-logo.svg`} alt="EXMA" className="exma-logo-img exma-footer-logo-img" />
+          <div className="exma-footer-logo-wrap">
+            <img src={`${import.meta.env.BASE_URL}exma-speakers-logo.svg`} alt="EXMA" className="exma-footer-logo-img" />
+          </div>
           <p className="exma-footer-tagline">
             La plataforma para conectar organizadores<br />con speakers de clase mundial.
           </p>
@@ -112,7 +114,7 @@ export default function ExmaFooter() {
         <div className="exma-footer-legal">
           {legal.map((l) => <a key={l} href="#" className="exma-footer-legal-link">{l}</a>)}
         </div>
-        <span className="exma-footer-powered">Hub365.ai</span>
+        <span className="exma-footer-powered">Powered by Hub365.ai</span>
       </div>
     </footer>
   );
