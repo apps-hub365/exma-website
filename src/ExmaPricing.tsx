@@ -1,32 +1,118 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const plans = [
+const speakerPlans = [
   {
-    name: 'Organizador',
+    name: 'Básico',
     price: 'Gratis',
-    desc: 'Explora la plataforma.',
-    includes: ['Directorio completo', 'Ver perfiles y reels', '3 solicitudes/mes', 'Constructor básico de lineup'],
-    cta: 'Comenzar Gratis',
-    recommended: false,
+    period: '',
+    desc: 'Empieza a construir tu presencia como speaker.',
+    includes: [
+      'Perfil público verificado',
+      'Recibir hasta 3 solicitudes/mes',
+      'Speaker Score básico',
+      'Badge de perfil verificado',
+    ],
+    cta: 'Crear mi perfil',
+    featured: false,
   },
   {
-    name: 'Speaker',
+    name: 'Profesional',
+    price: '$29',
+    period: '/mes',
+    desc: 'Para speakers que quieren crecer y monetizar.',
+    includes: [
+      'Todo lo del plan Básico',
+      'Solicitudes ilimitadas',
+      'Speaker Score avanzado con IA',
+      'Analytics de perfil',
+      'Gestión de agenda',
+      'Cobros seguros por la plataforma',
+      'Certificación EXMA disponible',
+      'Soporte prioritario',
+    ],
+    cta: 'Prueba 14 días gratis',
+    featured: true,
+  },
+  {
+    name: 'Elite',
+    price: '$79',
+    period: '/mes',
+    desc: 'Para speakers de alto nivel que dominan escenarios.',
+    includes: [
+      'Todo lo del plan Profesional',
+      'Posicionamiento destacado',
+      'Manager de cuenta dedicado',
+      'Acceso a eventos exclusivos',
+      'Training con referentes',
+      'Badge Elite verificado',
+    ],
+    cta: 'Contactar ventas',
+    featured: false,
+  },
+];
+
+const organizerPlans = [
+  {
+    name: 'Explorador',
     price: 'Gratis',
-    desc: 'Para speakers profesionales.',
-    includes: ['Solicitudes ilimitadas', 'Búsqueda con IA', 'Contratos digitales', 'Gestor de lineup completo', 'Tracking de presupuesto', 'Analytics e informes', 'Soporte prioritario 24h'],
+    period: '',
+    desc: 'Descubre speakers para tu próximo evento.',
+    includes: [
+      'Acceso al directorio completo',
+      'Ver perfiles y reels',
+      '3 solicitudes al mes',
+      'Lineup básico',
+    ],
     cta: 'Comenzar Gratis',
-    recommended: true,
+    featured: false,
+  },
+  {
+    name: 'Organizador Pro',
+    price: '$49',
+    period: '/mes',
+    desc: 'Herramientas completas para eventos de alto impacto.',
+    includes: [
+      'Todo lo del plan Explorador',
+      'Solicitudes ilimitadas',
+      'Búsqueda avanzada con IA',
+      'Contratos digitales',
+      'Gestor completo de lineup',
+      'Tracking de presupuesto',
+      'Analytics e informes',
+      'Soporte prioritario 24/7',
+    ],
+    cta: 'Prueba 14 días gratis',
+    featured: true,
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    desc: 'Para empresas con múltiples eventos al año.',
+    includes: [
+      'Todo lo del plan Pro',
+      'Múltiples usuarios',
+      'API de integración',
+      'Account manager dedicado',
+      'Facturación corporativa',
+      'SLA garantizado',
+    ],
+    cta: 'Contactar ventas',
+    featured: false,
   },
 ];
 
 export default function ExmaPricing() {
   const sectionRef = useRef<HTMLElement>(null);
-  const headRef = useRef<HTMLHeadingElement>(null);
+  const headRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [tab, setTab] = useState<'speakers' | 'organizadores'>('speakers');
+
+  const plans = tab === 'speakers' ? speakerPlans : organizerPlans;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -34,37 +120,59 @@ export default function ExmaPricing() {
         y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
         scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
       });
-
-      gsap.fromTo(cardRefs.current.filter(Boolean), { y: 60, opacity: 0 }, {
-        y: 0, opacity: 1, stagger: 0.15, duration: 0.9, ease: 'power3.out',
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-      });
-
-      cardRefs.current.forEach((card) => {
-        if (!card) return;
-        card.addEventListener('mouseenter', () => gsap.to(card, { y: -6, duration: 0.3 }));
-        card.addEventListener('mouseleave', () => gsap.to(card, { y: 0, duration: 0.3 }));
-      });
     }, sectionRef);
     return () => ctx.revert();
   }, []);
 
+  // Animate cards on tab change
+  useEffect(() => {
+    const cards = cardRefs.current.filter(Boolean);
+    gsap.fromTo(cards, { y: 30, opacity: 0 }, {
+      y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: 'power3.out',
+    });
+  }, [tab]);
+
   return (
     <section ref={sectionRef} className="exma-pricing-section" data-section="pricing" id="pricing">
-      <h2 ref={headRef} className="exma-pricing-headline exma-headline">Precios simples.</h2>
-      <p className="exma-pricing-sub">Sin costos ocultos. Sin sorpresas.</p>
+      <div ref={headRef} className="exma-pricing-header">
+        <p className="exma-pricing-eyebrow">Precios</p>
+        <h2 className="exma-pricing-headline exma-headline">Planes</h2>
+        <p className="exma-pricing-sub">Sin costos ocultos. Sin letra pequeña. Cancela cuando quieras.</p>
+
+        {/* Tabs */}
+        <div className="exma-pricing-tabs">
+          <button
+            className={`exma-pricing-tab ${tab === 'speakers' ? 'exma-pricing-tab-active' : ''}`}
+            onClick={() => setTab('speakers')}
+          >
+            Para Speakers
+          </button>
+          <button
+            className={`exma-pricing-tab ${tab === 'organizadores' ? 'exma-pricing-tab-active' : ''}`}
+            onClick={() => setTab('organizadores')}
+          >
+            Para Organizadores
+          </button>
+        </div>
+      </div>
 
       <div className="exma-pricing-grid">
         {plans.map((plan, i) => (
           <div
-            key={plan.name}
+            key={`${tab}-${plan.name}`}
             ref={(el) => { cardRefs.current[i] = el; }}
-            className={`exma-pricing-card ${plan.recommended ? 'exma-pricing-card-featured' : ''}`}
+            className={`exma-pricing-card ${plan.featured ? 'exma-pricing-card-featured' : ''}`}
           >
-            {plan.recommended && <span className="exma-pricing-badge">Recomendado</span>}
-            <p className="exma-pricing-plan-name exma-headline">{plan.name}</p>
-            <p className="exma-pricing-price exma-headline">{plan.price}</p>
-            <p className="exma-pricing-desc">{plan.desc}</p>
+            {plan.featured && <span className="exma-pricing-badge">Más popular</span>}
+            <div className="exma-pricing-card-top">
+              <p className="exma-pricing-plan-name exma-headline">{plan.name}</p>
+              <div className="exma-pricing-price-row">
+                <span className="exma-pricing-price exma-headline">{plan.price}</span>
+                {plan.period && <span className="exma-pricing-period">{plan.period}</span>}
+              </div>
+              <p className="exma-pricing-desc">{plan.desc}</p>
+            </div>
+            <div className="exma-pricing-divider" />
             <ul className="exma-pricing-list">
               {plan.includes.map((item) => (
                 <li key={item} className="exma-pricing-item">
@@ -73,12 +181,12 @@ export default function ExmaPricing() {
                 </li>
               ))}
             </ul>
-            <button className="exma-pricing-cta">{plan.cta}</button>
+            <button className={`exma-pricing-cta ${plan.featured ? 'exma-pricing-cta-featured' : ''}`}>
+              {plan.cta}
+            </button>
           </div>
         ))}
       </div>
-
-      <a href="#" className="exma-pricing-link">Ver todos los planes →</a>
     </section>
   );
 }

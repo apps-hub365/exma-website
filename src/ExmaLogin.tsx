@@ -50,7 +50,7 @@ export default function ExmaLogin({ onClose }: ExmaLoginProps) {
         </button>
 
         <div className="exma-login-header">
-          <img src="/exma-logo.png?v=2" alt="EXMA" className="exma-logo-img exma-login-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}exma-speakers-logo.svg`} alt="EXMA" className="exma-logo-img exma-login-logo-img" />
           <p className="exma-login-eyebrow">Members Area</p>
         </div>
 

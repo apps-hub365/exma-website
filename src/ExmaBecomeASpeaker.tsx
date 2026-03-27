@@ -44,11 +44,11 @@ export default function ExmaBecomeASpeaker() {
       {/* Navbar */}
       <nav className="exma-navbar exma-navbar-scrolled">
         <a onClick={() => navigate('/')} className="exma-nav-logo" style={{ cursor: 'pointer' }}>
-          <img src="/exma-logo.png?v=2" alt="EXMA" className="exma-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}exma-speakers-logo.svg`} alt="EXMA" className="exma-logo-img" />
         </a>
         <ul className="exma-nav-links">
-          <li><a onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>Home</a></li>
-          <li><a className="exma-nav-active">Become a Speaker</a></li>
+          <li><a onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>Inicio</a></li>
+          <li><a className="exma-nav-active">Quiero ser Speaker</a></li>
         </ul>
       </nav>
 
@@ -57,7 +57,7 @@ export default function ExmaBecomeASpeaker() {
         <div className="exma-speaker-form-hero-bg" />
         <div ref={heroRef} className="exma-speaker-form-hero-content">
           <p className="exma-speaker-form-eyebrow">EXMA Speakers 2026</p>
-          <h1 className="exma-speaker-form-title exma-headline">Become a<br />Speaker</h1>
+          <h1 className="exma-speaker-form-title exma-headline">Quiero ser<br />Speaker</h1>
           <p className="exma-speaker-form-desc">
             Share your vision with thousands of leaders, entrepreneurs and change-makers.<br />
             Apply now and let your voice move the world.

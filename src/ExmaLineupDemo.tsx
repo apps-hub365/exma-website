@@ -32,7 +32,7 @@ export default function ExmaLineupDemo() {
   return (
     <section ref={sectionRef} className="exma-lineup-section" data-section="lineup">
       <p className="exma-lineup-eyebrow">Dashboard de Evento</p>
-      <h2 className="exma-lineup-headline exma-headline">Lineup del Evento.</h2>
+      <h2 className="exma-lineup-headline exma-headline">Lineup del Evento</h2>
 
       <div ref={cardRef} className="exma-lineup-card">
         <div className="exma-lineup-header">

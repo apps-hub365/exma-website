@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,6 +16,7 @@ const wordStyle: React.CSSProperties = {
 };
 
 export default function ExmaHero({ onSpeakerClick }: ExmaHeroProps) {
+  const navigate = useNavigate();
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
@@ -67,11 +69,12 @@ export default function ExmaHero({ onSpeakerClick }: ExmaHeroProps) {
       <video
         ref={videoRef}
         className="exma-hero-video"
-        src="/videos/exma-speakers-intro.mp4"
+        src={`${import.meta.env.BASE_URL}videos/exma-speakers-intro.mp4`}
         autoPlay
         muted
         loop
         playsInline
+        style={{ pointerEvents: 'none' }}
       />
       <div className="exma-hero-overlay" />
 
@@ -95,17 +98,14 @@ export default function ExmaHero({ onSpeakerClick }: ExmaHeroProps) {
 
         <div className="exma-hero-ctas">
           <a
-            href="#speakers"
             className="exma-hero-cta-primary"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#speakers')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={() => navigate('/speakers')}
+            style={{ cursor: 'pointer' }}
           >
-            Explorar Speekers
+            Explorar Speakers
           </a>
           <button className="exma-hero-cta-secondary" onClick={onSpeakerClick}>
-            Soy Speeker
+            Soy Speaker
           </button>
         </div>
       </div>

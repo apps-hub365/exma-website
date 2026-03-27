@@ -1,0 +1,264 @@
+/* ── PLANES PAGE ──────────────────────────────────────── */
+.exma-planes-page {
+  padding-top: 0;
+}
+
+.exma-planes-header {
+  padding: 9rem 2rem 3rem;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, #2a0050 0%, #0d0025 50%, #03000f 100%);
+}
+
+.exma-planes-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #F608F7;
+  margin: 0 0 1rem;
+}
+
+.exma-planes-title {
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: #ffffff;
+  margin: 0 0 1rem;
+  line-height: 0.9;
+}
+
+.exma-planes-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 2.5rem;
+  line-height: 1.6;
+}
+
+/* Tabs */
+.exma-planes-tabs {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.exma-planes-tab {
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.exma-planes-tab:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.exma-planes-tab-active {
+  background: #F608F7;
+  color: #ffffff;
+}
+
+/* Grid */
+.exma-planes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  align-items: stretch;
+}
+
+/* Cards */
+.exma-planes-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.exma-planes-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(155, 93, 229, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.exma-planes-card-featured {
+  background: #F608F7;
+  border-color: #F608F7;
+  transform: scale(1.04);
+}
+
+.exma-planes-card-featured:hover {
+  transform: scale(1.04) translateY(-6px);
+  border-color: #F608F7;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.exma-planes-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.35rem 1.2rem;
+  background: #0d0025;
+  border: 1px solid #F608F7;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #F608F7;
+  white-space: nowrap;
+}
+
+.exma-planes-plan-name {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+  line-height: 1;
+}
+
+.exma-planes-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.exma-planes-price {
+  font-size: clamp(3rem, 5vw, 4rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+}
+
+.exma-planes-period {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.exma-planes-card-featured .exma-planes-period { color: rgba(255, 255, 255, 0.7); }
+
+.exma-planes-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.exma-planes-card-featured .exma-planes-desc { color: rgba(255, 255, 255, 0.8); }
+
+.exma-planes-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.exma-planes-card-featured .exma-planes-divider { background: rgba(255, 255, 255, 0.25); }
+
+.exma-planes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.exma-planes-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.exma-planes-card-featured .exma-planes-item { color: rgba(255, 255, 255, 0.9); }
+
+.exma-planes-check {
+  color: #F608F7;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.exma-planes-card-featured .exma-planes-check { color: #ffffff; }
+
+.exma-planes-cta {
+  margin-top: auto;
+  padding: 0.9rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.35s;
+  text-align: center;
+}
+
+.exma-planes-cta:hover {
+  background: #ffffff;
+  color: #0d0025;
+  border-color: #ffffff;
+}
+
+.exma-planes-cta-featured {
+  background: #ffffff;
+  color: #F608F7;
+  border-color: #ffffff;
+}
+
+.exma-planes-cta-featured:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Bottom */
+.exma-planes-bottom {
+  text-align: center;
+  padding: 0 2rem 4rem;
+}
+
+.exma-planes-bottom-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 900px) {
+  .exma-planes-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+  .exma-planes-card-featured { transform: scale(1); }
+  .exma-planes-card-featured:hover { transform: translateY(-6px); }
+}

@@ -62,7 +62,7 @@ export default function ExmaMockupSearch() {
   return (
     <section ref={sectionRef} className="exma-mockup-section" data-section="mockup">
       <p className="exma-mockup-eyebrow">Búsqueda Inteligente</p>
-      <h2 className="exma-mockup-headline exma-headline">Encuentra al speeker ideal.</h2>
+      <h2 className="exma-mockup-headline exma-headline">Encuentra al speaker ideal</h2>
 
       <div
         ref={cardRef}
@@ -107,7 +107,7 @@ export default function ExmaMockupSearch() {
           ))}
         </div>
 
-        <p className="exma-mockup-note">48 de 1,200+ speekers</p>
+        <p className="exma-mockup-note">48 de 1,200+ speakers</p>
       </div>
     </section>
   );

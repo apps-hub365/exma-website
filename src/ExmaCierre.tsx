@@ -43,13 +43,13 @@ export default function ExmaCierre() {
       <div className="exma-cierre-content">
         <h2 className="exma-cierre-headline exma-headline">
           <span ref={line1Ref} className="exma-cierre-line">Tu mensaje merece</span>
-          <span ref={line2Ref} className="exma-cierre-line">el mejor escenario.</span>
+          <span ref={line2Ref} className="exma-cierre-line">el mejor escenario</span>
         </h2>
         <p ref={bodyRef} className="exma-cierre-body">
           La red de speakers más grande de LATAM.<br />
           Tú pones el mensaje. Nosotros la plataforma.
         </p>
-        <button ref={ctaRef} className="exma-cierre-cta">Quiero ser speeker</button>
+        <button ref={ctaRef} className="exma-cierre-cta">Quiero ser speaker</button>
       </div>
     </section>
   );

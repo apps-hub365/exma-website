@@ -11,7 +11,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 500, suffix: '+', label: 'Speekers' },
+  { value: 500, suffix: '+', label: 'Speakers' },
   { value: 50, suffix: '+', label: 'Países' },
   { value: 1, suffix: 'M+', label: 'Asistentes' },
 ];

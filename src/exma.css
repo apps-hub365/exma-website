@@ -14,6 +14,38 @@
   font-family: 'Bebas Neue', sans-serif;
 }
 
+/* Scroll indicator */
+.exma-scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 1rem;
+  transition: color 0.3s;
+  animation: exma-scroll-bounce 2s ease-in-out infinite;
+}
+
+.exma-scroll-indicator:hover {
+  color: #F608F7;
+}
+
+.exma-scroll-indicator-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+@keyframes exma-scroll-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
 
 /* ── INTRO OVERLAY ───────────────────────────────────── */
 .exma-intro-overlay {
@@ -45,7 +77,7 @@
 }
 
 .exma-intro-svg-wrap {
-  width: clamp(200px, 50vw, 500px);
+  width: clamp(400px, 95vw, 1000px);
   height: auto;
 }
 
@@ -285,6 +317,142 @@
   margin-bottom: 4rem;
   letter-spacing: 0.05em;
   color: #ffffff;
+}
+
+/* Featured — Speaker del Mes */
+.exma-featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(155, 93, 229, 0.2);
+}
+
+.exma-featured-img-wrap {
+  position: relative;
+  min-height: 420px;
+}
+
+.exma-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exma-featured-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: #F608F7;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+
+.exma-featured-info {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.exma-featured-month {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(246, 8, 247, 0.6);
+}
+
+.exma-featured-name {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.exma-featured-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(246, 8, 247, 0.7);
+  margin: 0;
+}
+
+.exma-featured-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin: 0;
+  border-left: 2px solid rgba(246, 8, 247, 0.35);
+  padding-left: 1.25rem;
+}
+
+.exma-featured-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.exma-featured-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.exma-featured-stat-num {
+  font-size: 2rem;
+  color: #F608F7;
+  line-height: 1;
+}
+
+.exma-featured-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.exma-featured-cta {
+  align-self: flex-start;
+  padding: 0.8rem 2rem;
+  border: 1.5px solid #F608F7;
+  border-radius: 999px;
+  background: #F608F7;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.exma-featured-cta:hover {
+  background: transparent;
+  color: #F608F7;
+}
+
+@media (max-width: 768px) {
+  .exma-featured-card { grid-template-columns: 1fr; }
+  .exma-featured-info { padding: 2rem; }
+  .exma-featured-img-wrap { min-height: 300px; }
 }
 
 .exma-speakers-grid {

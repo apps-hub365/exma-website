@@ -46,6 +46,15 @@ const socialLinks = [
       </svg>
     ),
   },
+  {
+    key: 'tiktok',
+    label: 'TikTok',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.67a8.18 8.18 0 0 0 4.78 1.52V6.72a4.85 4.85 0 0 1-1.01-.03z"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function ExmaFooter() {
@@ -73,7 +82,7 @@ export default function ExmaFooter() {
     <footer ref={sectionRef} className="exma-footer-full" data-section="footer">
       <div className="exma-footer-top">
         <div className="exma-footer-brand">
-          <img src="/exma-logo.png?v=2" alt="EXMA" className="exma-logo-img exma-footer-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}exma-speakers-logo.svg`} alt="EXMA" className="exma-logo-img exma-footer-logo-img" />
           <p className="exma-footer-tagline">
             La plataforma para conectar organizadores<br />con speakers de clase mundial.
           </p>

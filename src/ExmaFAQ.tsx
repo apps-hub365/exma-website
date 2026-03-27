@@ -12,7 +12,7 @@ const faqs = [
   { q: '¿Cómo funciona el Speaker Score?', a: 'Es un algoritmo que evalúa la calidad de tu perfil (video, bio, reseñas), tu historial de eventos, ratings recibidos y tu actividad en la plataforma. Un score más alto te posiciona mejor en los resultados de búsqueda.' },
   { q: '¿Los pagos son seguros?', a: 'Sí. El pago se retiene en escrow hasta que el evento se realiza satisfactoriamente. Usamos encriptación bancaria y todos los contratos están protegidos por nuestra garantía EXMA.' },
   { q: '¿Qué pasa si el speaker cancela?', a: 'Tienes garantía total: reembolso completo o reemplazo inmediato con un speaker de igual o mayor nivel. Nunca te quedas sin speaker.' },
-  { q: '¿Cómo me registro como speaker?', a: "Completa tu aplicación en la sección 'Become a Speaker', sube tu video de presentación y pasa la evaluación de calidad. Si eres aprobado, tu perfil se activa en 48h." },
+  { q: '¿Cómo me registro como speaker?', a: "Completa tu aplicación en la sección 'Quiero ser Speaker', sube tu video de presentación y pasa la evaluación de calidad. Si eres aprobado, tu perfil se activa en 48h." },
 ];
 
 export default function ExmaFAQ() {
@@ -63,7 +63,7 @@ export default function ExmaFAQ() {
 
   return (
     <section ref={sectionRef} className="exma-faq-section" data-section="faq">
-      <h2 className="exma-faq-headline exma-headline">Preguntas frecuentes.</h2>
+      <h2 className="exma-faq-headline exma-headline">Preguntas frecuentes</h2>
       <div className="exma-faq-list">
         {faqs.map((faq, i) => (
           <div key={i} className="exma-faq-item" onClick={() => toggle(i)}>

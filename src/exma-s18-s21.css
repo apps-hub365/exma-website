@@ -78,20 +78,29 @@
 }
 
 .exma-chatbot-btn {
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #9a0098, #F608F7);
-  border: none;
-  font-size: 1.4rem;
+  background: transparent;
+  border: 2px solid rgba(246, 8, 247, 0.4);
+  padding: 0;
+  overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 8px 30px rgba(246, 8, 247, 0.35);
-  transition: box-shadow 0.3s;
+  box-shadow: 0 8px 30px rgba(246, 8, 247, 0.3);
+  transition: box-shadow 0.3s, border-color 0.3s;
   will-change: transform;
+}
+
+.exma-chatbot-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .exma-chatbot-btn:hover {
   box-shadow: 0 12px 40px rgba(246, 8, 247, 0.5);
+  border-color: rgba(246, 8, 247, 0.8);
 }
 
 .exma-chatbot-panel {
@@ -117,15 +126,18 @@
 }
 
 .exma-chatbot-avatar {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #9a0098, #F608F7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
+  overflow: hidden;
   flex-shrink: 0;
+  border: 1px solid rgba(246, 8, 247, 0.3);
+}
+
+.exma-chatbot-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .exma-chatbot-name {

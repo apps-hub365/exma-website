@@ -35,7 +35,7 @@ export default function ExmaProfileDemo() {
 
   return (
     <section ref={sectionRef} className="exma-profile-section" data-section="profile">
-      <p className="exma-profile-eyebrow exma-headline">Tu speeker de clase mundial.</p>
+      <p className="exma-profile-eyebrow exma-headline">Tu speaker de clase mundial.</p>
 
       <div ref={cardRef} className="exma-profile-card">
         <div className="exma-profile-left">
@@ -52,7 +52,7 @@ export default function ExmaProfileDemo() {
 
         <div className="exma-profile-right">
           <h2 className="exma-profile-name exma-headline">María González</h2>
-          <p className="exma-profile-title">Experta en Liderazgo · Autora · Keynote Speeker</p>
+          <p className="exma-profile-title">Experta en Liderazgo · Autora · Keynote Speaker</p>
 
           <div className="exma-profile-stars">
             {[1,2,3,4,5].map((s) => (
@@ -75,7 +75,7 @@ export default function ExmaProfileDemo() {
           <div className="exma-profile-score-box">
             <span className="exma-profile-score-num exma-headline">{scoreDisplay}</span>
             <div>
-              <span className="exma-profile-score-label">Speeker Score</span>
+              <span className="exma-profile-score-label">Speaker Score</span>
               <span className="exma-profile-score-sub">Rank #14 LATAM</span>
             </div>
           </div>

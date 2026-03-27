@@ -8,13 +8,13 @@ const steps = [
   {
     num: '1.',
     title: 'Busca y filtra',
-    body: '+1,200 speekers. Búsqueda con IA por tema, idioma, tarifa, país. Encuentra al speeker perfecto en segundos.',
+    body: '+1,200 speakers. Búsqueda con IA por tema, idioma, tarifa, país. Encuentra al speaker perfecto en segundos.',
     img: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=700&h=500&fit=crop',
   },
   {
     num: '2.',
     title: 'Revisa y compara',
-    body: 'Videos, reseñas verificadas, eventos pasados. Tarifas transparentes. Speeker Score con IA para tomar mejores decisiones.',
+    body: 'Videos, reseñas verificadas, eventos pasados. Tarifas transparentes. Speaker Score con IA para tomar mejores decisiones.',
     img: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=700&h=500&fit=crop',
   },
   {

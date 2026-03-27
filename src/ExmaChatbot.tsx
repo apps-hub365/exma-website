@@ -5,7 +5,7 @@ const quickReplies = ['Ver Eventos', 'Demo', 'Ser Speaker', 'Membresías'];
 const autoResponses: Record<string, string> = {
   'Ver Eventos': 'Tenemos más de 500 eventos anuales. ¿Te gustaría ver el calendario?',
   'Demo': 'Puedo conectarte con nuestro equipo para una demo personalizada.',
-  'Ser Speaker': 'Genial! Ve a la sección Become a Speaker y llena el formulario.',
+  'Ser Speaker': 'Genial! Ve a la sección Quiero ser Speaker y llena el formulario.',
   'Membresías': 'Ofrecemos planes gratuitos para speakers y organizadores. ¿Cuál te interesa?',
 };
 
@@ -22,7 +22,7 @@ export default function ExmaChatbot() {
   const [greetingDone, setGreetingDone] = useState(false);
   const [typingGreeting, setTypingGreeting] = useState('');
 
-  const GREETING = '¡Hola! Soy Exma Robot. ¿En qué puedo ayudarte?';
+  const GREETING = '¡Hola! Soy Exma Soporte. ¿En qué puedo ayudarte?';
 
   // Button pulse + appear
   useEffect(() => {
@@ -79,9 +79,9 @@ export default function ExmaChatbot() {
       {open && (
         <div ref={panelRef} className="exma-chatbot-panel">
           <div className="exma-chatbot-header">
-            <div className="exma-chatbot-avatar">🤖</div>
+            <div className="exma-chatbot-avatar"><img src={`${import.meta.env.BASE_URL}gemini-avatar.png`} alt="Exma Soporte" /></div>
             <div>
-              <p className="exma-chatbot-name">Exma Robot</p>
+              <p className="exma-chatbot-name">Exma Soporte</p>
               <p className="exma-chatbot-status">En línea</p>
             </div>
             <button className="exma-chatbot-close" onClick={closeChat}>✕</button>
@@ -122,7 +122,7 @@ export default function ExmaChatbot() {
 
       {/* Toggle button */}
       <button ref={btnRef} className="exma-chatbot-btn" onClick={open ? closeChat : openChat} style={{ opacity: 0 }}>
-        🤖
+        <img src={`${import.meta.env.BASE_URL}gemini-avatar.png`} alt="Soporte" />
       </button>
     </div>
   );

@@ -1,3 +1,159 @@
+/* ── SPEAKER DEL MES ─────────────────────────────────── */
+.exma-sotm-section {
+  background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.exma-sotm-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #F608F7;
+  margin: 0 0 1rem;
+}
+
+.exma-sotm-headline {
+  font-size: clamp(3rem, 7vw, 7rem);
+  color: #ffffff;
+  margin: 0 0 4rem;
+  line-height: 1;
+}
+
+.exma-sotm-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(155, 93, 229, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.exma-sotm-img-wrap {
+  position: relative;
+  min-height: 400px;
+}
+
+.exma-sotm-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exma-sotm-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(246, 8, 247, 0.9);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+
+.exma-sotm-info {
+  padding: 3rem 3rem 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.exma-sotm-name {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.exma-sotm-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(246, 8, 247, 0.7);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.exma-sotm-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  margin: 0;
+  border-left: 2px solid rgba(246, 8, 247, 0.4);
+  padding-left: 1.25rem;
+}
+
+.exma-sotm-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.exma-sotm-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.exma-sotm-stat-num {
+  font-size: 2rem;
+  color: #F608F7;
+  line-height: 1;
+}
+
+.exma-sotm-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.exma-sotm-cta {
+  align-self: flex-start;
+  padding: 0.8rem 2rem;
+  border: 1.5px solid #F608F7;
+  border-radius: 999px;
+  background: #F608F7;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.exma-sotm-cta:hover {
+  background: transparent;
+  color: #F608F7;
+}
+
+@media (max-width: 768px) {
+  .exma-sotm-card {
+    grid-template-columns: 1fr;
+  }
+  .exma-sotm-info {
+    padding: 2rem;
+  }
+  .exma-sotm-img-wrap {
+    min-height: 300px;
+  }
+}
+
 /* ── S07 MOCKUP SEARCH ──────────────────────────────── */
 .exma-mockup-section {
   background: radial-gradient(ellipse at 50% 50%, #1a0035 0%, #08001a 50%, #03000f 100%);

@@ -6,9 +6,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   { num: '01', title: 'Certificación Global', body: 'Obtén el certificado EXMA reconocido en toda Latinoamérica y España.' },
-  { num: '02', title: 'Acceso a +3,000 Eventos', body: 'Tu perfil visible para miles de organizadores que buscan speekers cada día.' },
+  { num: '02', title: 'Acceso a +3,000 Eventos', body: 'Tu perfil visible para miles de organizadores que buscan speakers cada día.' },
   { num: '03', title: 'Monetización Real', body: 'Establece tus tarifas, negocia y cobra de forma segura desde la plataforma.' },
-  { num: '04', title: 'Red de Speekers Elite', body: 'Conecta, aprende y colabora con los mejores speekers de la región.' },
+  { num: '04', title: 'Red de Speakers Elite', body: 'Conecta, aprende y colabora con los mejores speakers de la región.' },
   { num: '05', title: 'Training con los Mejores', body: 'Programas de formación con referentes del mundo del conocimiento.' },
   { num: '06', title: 'Dashboard Profesional', body: 'Controla tus estadísticas, agenda y reputación desde un solo lugar.' },
 ];
@@ -50,10 +50,10 @@ export default function ExmaConnectTabs() {
       <div className="exma-career-header">
         <p className="exma-career-eyebrow exma-career-animate">EXMA Speakers Platform</p>
         <h2 className="exma-career-headline exma-headline exma-career-animate">
-          Tu carrera como speeker.
+          Tu carrera como speaker
         </h2>
         <h2 className="exma-career-headline exma-career-headline-italic exma-headline exma-career-animate">
-          Siguiente nivel.
+          Siguiente nivel
         </h2>
       </div>
 

@@ -1,10 +1,11 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollIndicator from './ScrollIndicator';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WORDS = ['SPEEKERS', 'THAT', 'MOVE', 'THE', 'WORLD'];
+const WORDS = ['VOCES', 'QUE', 'MUEVEN', 'AL', 'MUNDO'];
 
 export default function ExmaIlluminate() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -44,7 +45,7 @@ export default function ExmaIlluminate() {
     <>
       <section ref={sectionRef} className="exma-illuminate" data-section="illuminate">
         <div className="exma-illuminate-inner">
-          <p className="exma-illuminate-badge">La plataforma #1 de speekers en Latam</p>
+          <p className="exma-illuminate-badge">La plataforma #1 de speakers en Latam</p>
           <div className="exma-illuminate-words-row">
             {WORDS.map((word, i) => (
               <span
@@ -56,6 +57,7 @@ export default function ExmaIlluminate() {
               </span>
             ))}
           </div>
+          <ScrollIndicator />
         </div>
       </section>
     </>

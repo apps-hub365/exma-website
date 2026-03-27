@@ -43,7 +43,7 @@ export const speakersMock: SpeakerMock[] = [
     img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=1000&fit=crop',
     imgHero: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1920&h=1080&fit=crop',
     video: null,
-    videoConferencia: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoConferencia: `${import.meta.env.BASE_URL}videos/speaker-stage.mp4`,
 
   },
   {
@@ -71,7 +71,7 @@ export const speakersMock: SpeakerMock[] = [
     img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop',
     imgHero: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop',
     video: null,
-    videoConferencia: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoConferencia: `${import.meta.env.BASE_URL}videos/speaker-stage.mp4`,
 
   },
   {
@@ -99,7 +99,7 @@ export const speakersMock: SpeakerMock[] = [
     img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=1000&fit=crop',
     imgHero: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1920&h=1080&fit=crop',
     video: null,
-    videoConferencia: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoConferencia: `${import.meta.env.BASE_URL}videos/speaker-stage.mp4`,
 
   },
   {
@@ -127,7 +127,7 @@ export const speakersMock: SpeakerMock[] = [
     img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=1000&fit=crop',
     imgHero: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1920&h=1080&fit=crop',
     video: null,
-    videoConferencia: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoConferencia: `${import.meta.env.BASE_URL}videos/speaker-stage.mp4`,
 
   },
   {
@@ -155,7 +155,7 @@ export const speakersMock: SpeakerMock[] = [
     img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop',
     imgHero: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1920&h=1080&fit=crop',
     video: null,
-    videoConferencia: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoConferencia: `${import.meta.env.BASE_URL}videos/speaker-stage.mp4`,
 
   },
   {
@@ -183,7 +183,7 @@ export const speakersMock: SpeakerMock[] = [
     img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=1000&fit=crop',
     imgHero: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1920&h=1080&fit=crop',
     video: null,
-    videoConferencia: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    videoConferencia: `${import.meta.env.BASE_URL}videos/speaker-stage.mp4`,
 
   },
 ];

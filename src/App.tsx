@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
-import ExmaCursor from './ExmaCursor';
 import ExmaIntro from './ExmaIntro';
 import ExmaNav from './ExmaNav';
 import ExmaHero from './ExmaHero';
@@ -70,7 +69,6 @@ export default function App() {
 
   return (
     <div className="exma-page-wrapper">
-      <ExmaCursor />
 
       {!introComplete && <ExmaIntro onComplete={handleIntroComplete} />}
 

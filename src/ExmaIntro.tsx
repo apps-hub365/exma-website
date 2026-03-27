@@ -9,10 +9,18 @@ export default function ExmaIntro({ onComplete }: ExmaIntroProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const svgWrapRef = useRef<HTMLDivElement>(null);
   const [svgLoaded, setSvgLoaded] = useState(false);
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
+
+  // Safety timeout — if anything fails, skip intro after 5s
+  useEffect(() => {
+    const timer = setTimeout(() => onCompleteRef.current(), 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Load SVG inline
   useEffect(() => {
-    fetch('/exma-logo.svg')
+    fetch(`${import.meta.env.BASE_URL}exma-speakers-logo.svg`)
       .then((res) => res.text())
       .then((svgText) => {
         if (svgWrapRef.current) {
@@ -26,7 +34,8 @@ export default function ExmaIntro({ onComplete }: ExmaIntroProps) {
           }
           setSvgLoaded(true);
         }
-      });
+      })
+      .catch(() => onCompleteRef.current());
   }, []);
 
   // Run animation once SVG is loaded
@@ -34,17 +43,16 @@ export default function ExmaIntro({ onComplete }: ExmaIntroProps) {
     if (!svgLoaded || !svgWrapRef.current) return;
 
     const svg = svgWrapRef.current.querySelector('svg');
-    if (!svg) return;
+    if (!svg) { onCompleteRef.current(); return; }
 
     const rootG = svg.querySelector('g');
-    if (!rootG) return;
+    if (!rootG) { onCompleteRef.current(); return; }
 
     const elements = rootG.children;
     gsap.set(elements, { opacity: 0 });
 
     const tl = gsap.timeline();
 
-    // Logo elements appear with stagger
     tl.to(elements, {
       opacity: 1,
       duration: 0.12,
@@ -52,7 +60,6 @@ export default function ExmaIntro({ onComplete }: ExmaIntroProps) {
       ease: 'power2.out',
     });
 
-    // Subtle scale pulse
     tl.fromTo(
       svgWrapRef.current,
       { scale: 0.95 },
@@ -60,21 +67,17 @@ export default function ExmaIntro({ onComplete }: ExmaIntroProps) {
       '-=0.3'
     );
 
-    // Hold
     tl.to({}, { duration: 0.6 });
 
-    // Iris transition out
     tl.to(overlayRef.current, {
       clipPath: 'circle(0% at 50% 50%)',
       duration: 1.4,
       ease: 'power2.in',
-      onComplete,
+      onComplete: () => onCompleteRef.current(),
     });
 
-    return () => {
-      tl.kill();
-    };
-  }, [svgLoaded, onComplete]);
+    return () => { tl.kill(); };
+  }, [svgLoaded]);
 
   return (
     <div ref={overlayRef} className="exma-intro-overlay">

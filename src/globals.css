@@ -4,6 +4,20 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: none !important;
+}
+
+video,
+video::-webkit-media-controls,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-timeline {
+  cursor: none !important;
+}
+
+@media (hover: none) {
+  *, *::before, *::after,
+  video { cursor: auto !important; }
 }
 
 html, body {

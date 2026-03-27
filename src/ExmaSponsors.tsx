@@ -30,7 +30,7 @@ export default function ExmaSponsors() {
     <section ref={sectionRef} className="exma-sponsors-section" data-section="sponsors">
       <div ref={headRef} className="exma-sponsors-head">
         <p className="exma-sponsors-label">Sponsors</p>
-        <h2 className="exma-sponsors-headline exma-headline">Las marcas más grandes<br />ya están aquí.</h2>
+        <h2 className="exma-sponsors-headline exma-headline">Las marcas más grandes<br />ya están aquí</h2>
       </div>
 
       <div className="exma-sponsors-marquee-wrapper">
