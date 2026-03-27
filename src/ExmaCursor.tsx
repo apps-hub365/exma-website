@@ -12,18 +12,21 @@ export default function ExmaCursor() {
       dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     };
 
-    document.addEventListener('mouseover', (e) => {
-      if ((e.target as HTMLElement).closest('a, button')) {
+    const onOver = (e: MouseEvent) => {
+      const t = e.target;
+      if (t instanceof Element && t.closest('a, button')) {
         dot.classList.add('exma-cur-hover');
       } else {
         dot.classList.remove('exma-cur-hover');
       }
-    });
+    };
 
     window.addEventListener('mousemove', onMove, { passive: true });
+    document.addEventListener('mouseover', onOver);
 
     return () => {
       window.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseover', onOver);
     };
   }, []);
 
